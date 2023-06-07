@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
-import SideBar from "./Components/SideBar/SideBar";
+import Dashboard from "./Containers/Dashboard/Dashboard";
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<SideBar/>}/>
+      <Route path="/" element={<Dashboard/>}/>
     </Routes>
   );
 }
