@@ -103,6 +103,7 @@ const StyledBarChart = styled.div`
           background-color: #FFF8E5;
           padding: 11px 8px;
           border-radius: 7px;
+          box-shadow: 0px 4px 4px 0px #00000040;
         }
         span{
           padding-right: 4px;

@@ -11,6 +11,7 @@ font-family: 'Roboto';
   background-color: #ffffff;
   width: 68%;
   border-radius: 20px;
+  padding-bottom: 20px;
   .Achie{
       width: 790px;
       margin: 0 auto;
@@ -41,8 +42,15 @@ const StyledTotalCard = styled.div`
     height: 80px;
     border-radius: 10px;
     background-color: #EEEEEE;
-    p{
+    p:first-child{
         font-family: 'Roboto';
+        font-size: ${props => props.fontSize ? props.fontSize : "13px"};
+        font-weight: 600;
+        color: #7B7878;
+        margin: 0;
+    }
+    p{
+      font-family: 'Roboto';
         font-size: 13px;
         font-weight: 600;
         color: #7B7878;
@@ -104,9 +112,9 @@ const StyledInfoProduct = styled.div`
         text-align: center;
     }
 `;
-const TotalCard = ({title, number, children}) => {
+const TotalCard = ({title, fontSize, number, children}) => {
   return (
-    <StyledTotalCard>
+    <StyledTotalCard fontSize={fontSize}>
       {children}
       <div>
         <p>{title}</p>
@@ -154,7 +162,7 @@ const Achievement = () => {
         <TotalCard title={"Total Visits"} number={"10.8m"}><Visit/></TotalCard>
         <TotalCard title={"Total Sales"} number={"100,345"}><Cart/></TotalCard>
         <TotalCard title={"Total Made"} number={"$200k"}><HandBag/></TotalCard>
-        <TotalCard title={"Order Completed"} number={"98,771"}><Printer/></TotalCard>
+        <TotalCard title={"Orders Completed"} fontSize={"10px"} number={"98,771"}><Printer/></TotalCard>
       </div>
       <div className="title"><h4>Top Products</h4></div>
       <div className="contents">

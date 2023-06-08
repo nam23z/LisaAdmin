@@ -16,14 +16,10 @@ const StyledSideBar = styled.div`
     text-align: left;
   }
   h1{
-    margin-bottom: 30%;
+    margin-bottom: 50px;
   }
   .active {
     color: #FF6F61;
-  }
-  .navA{
-    width: 100%;
-    height: 100%;
   }
   .navA:hover .iconSideBar{
     opacity: 1;
@@ -42,7 +38,7 @@ const StyledNavItem = styled.div`
   line-height: 21px;
   color: #7a797d;
   a {
-    width: 112%;
+    width: 100%;
     padding: 16px 16px 16px 4px;
     display: flex;
     align-items: center;
