@@ -1,4 +1,3 @@
-import Container from "../Container/Container";
 import { styled } from "styled-components";
 import Input from "../Input/Input";
 import SearchIcon from "../../assets/icons/Search.svg";
@@ -7,11 +6,11 @@ import IconNoti from "../../assets/icons/bell.svg";
 import MyAvt from "../../assets/avt/avt.svg";
 
 const StyledHeader = styled.div`
-  
   background-color: #E5E5E5;
   z-index: 99;
-  padding: 32px 32px 20px 32px;
-  width: 95%;
+  padding: 32px 0 20px 0;
+  margin: 0 auto;
+  width: 100%;
   .topHeader{
       display: flex;
       justify-content: space-between;
@@ -44,7 +43,6 @@ const StyledHeader = styled.div`
 const Header = () => {
   return (
         <StyledHeader>
-      <Container>
           <div className="topHeader">
           <h1>Overview</h1>
           <Input
@@ -71,7 +69,6 @@ const Header = () => {
             </div>
           </div>
     </div>
-      </Container>
         </StyledHeader>
   );
 };

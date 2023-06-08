@@ -1,7 +1,7 @@
 import SideBar from '../SideBar/SideBar';
 import Header from '../Header/Header';
 import { styled } from "styled-components";
-
+import Container from '../Container/Container';
 const StyledLayout = styled.div`
     width: 1728px;
     margin: 0 auto;
@@ -10,14 +10,14 @@ const StyledLayout = styled.div`
     }
     .sidebarP{
         float: left;
-        width: 14%;
-        /* display: inline-block; */
+        width: 16.5%;
         position: fixed;
         .sidebar{
         }
     }
-    .headerP{
-        width: 86%;
+    .RightSide{
+        background-color: #E5E5E5;
+        width: 82%;
         float: right;
         .header{
         }
@@ -30,9 +30,11 @@ const Layout = ({children}) => {
             <div className="sidebarP">
             <SideBar className="sidebar"/>
             </div>
-            <div className="headerP">
-                <Header className="header"/>
-                {children}
+            <div className="RightSide">
+                <Container>
+                    <Header className="header"/>
+                    {children}
+                </Container>
             </div>
         </StyledLayout>
     )

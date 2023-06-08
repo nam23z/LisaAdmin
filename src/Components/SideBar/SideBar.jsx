@@ -10,20 +10,15 @@ import { ReactComponent as Logout } from "../../assets/icons/Logout.svg";
 import { NavLink } from "react-router-dom";
 
 const StyledSideBar = styled.div`
-  /* background-color: #B5FFFC; */
   height: 100vh;
   padding: 32px 50px 0 50px;
+  .around{
+    text-align: left;
+  }
   h1{
-    margin-bottom: 50%;
+    margin-bottom: 30%;
   }
   .active {
-    svg {
-      /* stroke: #f30ee4; */
-      /* fill: #f30ee4; */
-      path {
-        /* stroke: #f30ee4; */
-      }
-    }
     color: #FF6F61;
   }
   .navA{
@@ -46,10 +41,9 @@ const StyledNavItem = styled.div`
   font-weight: 500;
   line-height: 21px;
   color: #7a797d;
-  /* margin-bottom: 36px; */
-  /* padding: 16px; */
   a {
-    padding: 16px;
+    width: 112%;
+    padding: 16px 16px 16px 4px;
     display: flex;
     align-items: center;
     gap: 16px;

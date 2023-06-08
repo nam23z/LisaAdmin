@@ -1,11 +1,10 @@
 import { BarChart, Bar, XAxis, ResponsiveContainer } from 'recharts';
 import { styled } from 'styled-components';
-
+import {ReactComponent as DownArrow} from '../../assets/icons/downArrow.svg';
 const data = [
   {
     name: 'Jan',
     uv: 4000,
-
   },
   {
     name: 'Feb',
@@ -65,17 +64,48 @@ const data = [
 ];
 
 const StyledBarChart = styled.div`
-
-    width: 70%;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    width: 68%;
+    height: 585px;
     .topBarChart{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
+        gap: 560px;
         align-items: center;
         .left{
+          padding-left: 10%;
         }
         h4{
             font-family: 'Roboto';
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 28px;
             color: #A7A7A7;
+            margin-top: 34px;
+            margin-bottom: 8px;
+        }
+        p{
+          font-family: 'Roboto';
+          font-size: 36px;
+          font-weight: 500px;
+          line-height: 42px;
+          margin-top: 0;
+        }
+        .right{
+          cursor: pointer;
+          font-family: 'Roboto';
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 14px;
+          width: 76px;
+          height: 14px;
+          background-color: #FFF8E5;
+          padding: 11px 8px;
+          border-radius: 7px;
+        }
+        span{
+          padding-right: 4px;
         }
     }
 `
@@ -88,11 +118,12 @@ const FirstBarChart = () => {
                     <p>$980,273.00</p>
                 </div>
                 <div className="right">
-                    <div className="menuRight">THIS YEAR</div>
+                    <div className="menuRight"><span>THIS YEAR</span> <DownArrow/></div>
                 </div>
             </div>
-            <ResponsiveContainer width="100%" height="100%" minWidth="500px" minHeight="400px">
+            <ResponsiveContainer width="100%" height="60%" minWidth="500px" minHeight="400px">
             <BarChart
+            barGap={0}
             width={500}
             height={300}
             data={data}
@@ -103,7 +134,7 @@ const FirstBarChart = () => {
                 bottom: 5,
             }}
             >
-            <XAxis dataKey="name" />
+            <XAxis tickLine={false} axisLine={false} dataKey="name" />
             <Bar radius={[13 ,13 ,0 ,0]} dataKey="pv" fill="#AEAEAE" />
             <Bar radius={[13 ,13 ,0 ,0]} dataKey="uv" fill="#FF6F61" />
             </BarChart>
