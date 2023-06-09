@@ -113,7 +113,7 @@ const FourPieChart = () => {
                               fill={e[0].fill}
                               />
                               <text
-                              x={circleSize / 2.3}
+                              x={circleSize / 2.2}
                               y={circleSize / 2}
                               textAnchor="middle"
                               dominantBaseline="middle"

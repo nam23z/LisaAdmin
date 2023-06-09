@@ -2,6 +2,7 @@ import Layout from "../../Components/Layout/Layout";
 import FirstBarChart from "../../Components/BarChart/BarChart";
 import FourPieChart from "../../Components/PieChart/PieChart";
 import Achievement from "../../Components/Achievements/Achievement";
+import Stats from "../../Components/Stats/Stats";
 import { styled } from "styled-components";
 
 const StyledDashboard = styled.div`
@@ -17,6 +18,7 @@ const Dashboard = () => {
                 <FirstBarChart/>
                 <FourPieChart/>
                 <Achievement/>
+                <Stats/>
             </StyledDashboard>
         </Layout>
     )
