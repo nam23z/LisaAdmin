@@ -1,146 +1,154 @@
-import { BarChart, Bar, XAxis, ResponsiveContainer } from 'recharts';
-import { styled } from 'styled-components';
-import {ReactComponent as DownArrow} from '../../assets/icons/downArrow.svg';
+import { BarChart, Bar, XAxis, ResponsiveContainer } from "recharts";
+import { styled } from "styled-components";
+import { ReactComponent as DownArrow } from "../../assets/icons/downArrow.svg";
 const data = [
   {
-    name: 'Jan',
+    name: "Jan",
     uv: 4000,
   },
   {
-    name: 'Feb',
+    name: "Feb",
     uv: 3000,
     pv: 1398,
   },
   {
-    name: 'Mar',
+    name: "Mar",
     uv: 2000,
     pv: 9800,
   },
   {
-    name: 'Apr',
+    name: "Apr",
     uv: 2780,
     pv: 3908,
   },
   {
-    name: 'May',
+    name: "May",
     uv: 1890,
     pv: 4800,
   },
   {
-    name: 'Jun',
+    name: "Jun",
     uv: 2390,
     pv: 3800,
   },
   {
-    name: 'Jul',
+    name: "Jul",
     uv: 3490,
     pv: 4300,
   },
   {
-    name: 'Aug',
+    name: "Aug",
     uv: 3490,
     pv: 4300,
   },
   {
-    name: 'Sep',
+    name: "Sep",
     uv: 3490,
     pv: 4300,
   },
   {
-    name: 'Oct',
+    name: "Oct",
     uv: 3490,
     pv: 4300,
   },
   {
-    name: 'Nov',
+    name: "Nov",
     uv: 3490,
     pv: 4300,
   },
   {
-    name: 'Dec',
+    name: "Dec",
     uv: 3490,
     pv: 4300,
-  }
+  },
 ];
 
 const StyledBarChart = styled.div`
-    background-color: #FFFFFF;
-    border-radius: 20px;
-    width: 68%;
-    height: 585px;
-    .topBarChart{
-        display: flex;
-        justify-content: space-around;
-        gap: 560px;
-        align-items: center;
-        .left{
-          padding-left: 10%;
-        }
-        h4{
-            font-family: 'Roboto';
-            font-size: 24px;
-            font-weight: 500;
-            line-height: 28px;
-            color: #A7A7A7;
-            margin-top: 34px;
-            margin-bottom: 8px;
-        }
-        p{
-          font-family: 'Roboto';
-          font-size: 36px;
-          font-weight: 500px;
-          line-height: 42px;
-          margin-top: 0;
-        }
-        .right{
-          cursor: pointer;
-          font-family: 'Roboto';
-          font-size: 12px;
-          font-weight: 500;
-          line-height: 14px;
-          width: 76px;
-          height: 14px;
-          background-color: #FFF8E5;
-          padding: 11px 8px;
-          border-radius: 7px;
-          box-shadow: 0px 4px 4px 0px #00000040;
-        }
-        span{
-          padding-right: 4px;
-        }
+  border: 1.6px solid rgba(13, 27, 62, 0.14);
+  background-color: #ffffff;
+  border-radius: 20px;
+  width: 68%;
+  height: 585px;
+  .topBarChart {
+    display: flex;
+    justify-content: space-around;
+    gap: 560px;
+    align-items: center;
+    .left {
+      padding-left: 10%;
     }
-`
+    h4 {
+      font-family: "Roboto";
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 28px;
+      color: #a7a7a7;
+      margin-top: 34px;
+      margin-bottom: 8px;
+    }
+    p {
+      font-family: "Roboto";
+      font-size: 36px;
+      font-weight: 500px;
+      line-height: 42px;
+      margin-top: 0;
+    }
+    .right {
+      cursor: pointer;
+      font-family: "Roboto";
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 14px;
+      width: 76px;
+      height: 14px;
+      background-color: #fff8e5;
+      padding: 11px 8px;
+      border-radius: 7px;
+      box-shadow: 0px 4px 4px 0px #00000040;
+    }
+    span {
+      padding-right: 4px;
+    }
+  }
+`;
 const FirstBarChart = () => {
-    return(
-        <StyledBarChart>
-            <div className="topBarChart">
-                <div className="Left">
-                    <h4>Total Revenue</h4>
-                    <p>$980,273.00</p>
-                </div>
-                <div className="right">
-                    <div className="menuRight"><span>THIS YEAR</span> <DownArrow/></div>
-                </div>
-            </div>
-            <ResponsiveContainer width="100%" height="60%" minWidth="500px" minHeight="400px">
-            <BarChart
-            barGap={0}
-            width={500}
-            height={300}
-            data={data}
-            margin={{
-                top: 5,
-                right: 30,
-                left: 20,
-                bottom: 5,
-            }}
-            >
-            <XAxis tickLine={false} axisLine={false} dataKey="name" />
-            <Bar radius={[13 ,13 ,0 ,0]} dataKey="pv" fill="#AEAEAE" />
-            <Bar radius={[13 ,13 ,0 ,0]} dataKey="uv" fill="#FF6F61" />
-            </BarChart>
-        </ResponsiveContainer>
-        </StyledBarChart>
-    )
-}
+  return (
+    <StyledBarChart>
+      <div className="topBarChart">
+        <div className="Left">
+          <h4>Total Revenue</h4>
+          <p>$980,273.00</p>
+        </div>
+        <div className="right">
+          <div className="menuRight">
+            <span>THIS YEAR</span> <DownArrow />
+          </div>
+        </div>
+      </div>
+      <ResponsiveContainer
+        width="100%"
+        height="60%"
+        minWidth="500px"
+        minHeight="400px"
+      >
+        <BarChart
+          barGap={0}
+          width={500}
+          height={300}
+          data={data}
+          margin={{
+            top: 5,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
+        >
+          <XAxis tickLine={false} axisLine={false} dataKey="name" />
+          <Bar radius={[13, 13, 0, 0]} dataKey="pv" fill="#AEAEAE" />
+          <Bar radius={[13, 13, 0, 0]} dataKey="uv" fill="#FF6F61" />
+        </BarChart>
+      </ResponsiveContainer>
+    </StyledBarChart>
+  );
+};
 export default FirstBarChart;

@@ -12,23 +12,25 @@ import { NavLink } from "react-router-dom";
 const StyledSideBar = styled.div`
   height: 100vh;
   padding: 32px 50px 0 50px;
-  .around{
+  box-shadow: 1px 0 rgba(13, 27, 62, 0.12);
+  .around {
     text-align: left;
   }
-  h1{
+  h1 {
     margin-bottom: 50px;
   }
   .active {
-    color: #FF6F61;
+    color: #ff6f61;
   }
-  .navA:hover .iconSideBar{
+  .navA:hover .iconSideBar {
     opacity: 1;
   }
-  .navA:hover a{
+  .navA:hover a {
     background-color: #ddd;
-    color: #FF6F61;
-    path{
-      fill: #FF6F61;
+    border-radius: 5px;
+    color: #ff6f61;
+    path {
+      fill: #ff6f61;
     }
   }
 `;
@@ -51,10 +53,10 @@ const StyledNavItem = styled.div`
 const NavItem = ({ text, path, children }) => {
   return (
     <StyledNavItem className="navA">
-        <NavLink to={path} className={"iconSideBar"}>
-          {children}
-          <span>{text}</span>
-        </NavLink>
+      <NavLink to={path} className={"iconSideBar"}>
+        {children}
+        <span>{text}</span>
+      </NavLink>
     </StyledNavItem>
   );
 };
@@ -63,31 +65,31 @@ const SideBar = () => {
   return (
     <StyledSideBar>
       <div className="around">
-        <h1>Lisa Admin</h1>
-      <NavItem text="Dashboard" path="/">
-        <Dashboard></Dashboard>
-      </NavItem>
-      <NavItem text="Products" path="/products">
-        <Products></Products>
-      </NavItem>
-      <NavItem text="Customers" path="/customers">
-        <Customers></Customers>
-      </NavItem>
-      <NavItem text="Orders" path="/orders">
-        <Orders></Orders>
-      </NavItem>
-      <NavItem text="Shipments" path="/shipments">
-        <Shipments></Shipments>
-      </NavItem>
-      <NavItem text="Transactions" path="/transactions">
-        <Transactions></Transactions>
-      </NavItem>
-      <NavItem text="Settings" path="/settings">
-        <Settings></Settings>
-      </NavItem>
-      <NavItem text="Logout" path="/logout">
-        <Logout></Logout>
-      </NavItem>
+        <h1>M Cinema</h1>
+        <NavItem text="Dashboard" path="/">
+          <Dashboard></Dashboard>
+        </NavItem>
+        <NavItem text="Products" path="/products">
+          <Products></Products>
+        </NavItem>
+        <NavItem text="Customers" path="/customers">
+          <Customers></Customers>
+        </NavItem>
+        <NavItem text="Orders" path="/orders">
+          <Orders></Orders>
+        </NavItem>
+        <NavItem text="Shipments" path="/shipments">
+          <Shipments></Shipments>
+        </NavItem>
+        <NavItem text="Transactions" path="/transactions">
+          <Transactions></Transactions>
+        </NavItem>
+        <NavItem text="Settings" path="/settings">
+          <Settings></Settings>
+        </NavItem>
+        <NavItem text="Logout" path="/logout">
+          <Logout></Logout>
+        </NavItem>
       </div>
     </StyledSideBar>
   );

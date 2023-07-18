@@ -17,6 +17,7 @@ const data = [
 ];
 
 const StyledBox = styled.div`
+  border: 1.6px solid rgba(13, 27, 62, 0.14);
   border-radius: 20px;
   width: 30%;
   background-color: #ffffff;
@@ -55,7 +56,7 @@ const StyledBox = styled.div`
     grid-row-gap: 16px;
     margin-top: 20px;
   }
-  .titStat{
+  .titStat {
     margin-bottom: 8px;
     color: #535353;
     line-height: 16px;
@@ -67,22 +68,22 @@ const StyledBox = styled.div`
     background-color: #eeeeee;
     border-radius: 4px;
   }
-  .womenStat{
+  .womenStat {
     height: 8px;
     border-radius: 4px;
-    background-color: #6C6C6C;
+    background-color: #6c6c6c;
   }
-  .menStat{
+  .menStat {
     height: 8px;
     border-radius: 4px;
-    background-color: #FF6B6B;
+    background-color: #ff6b6b;
   }
-  .kidsStat{
+  .kidsStat {
     height: 8px;
     border-radius: 4px;
-    background-color: #5F27CD;
+    background-color: #5f27cd;
   }
-  .percent{
+  .percent {
     margin-top: 4px;
     text-align: right;
     color: #535353;
@@ -107,15 +108,18 @@ const Stats = () => {
   return (
     <Box>
       {data.map((e) => {
-            return(
-                <div>
-                <p className="titStat">{e.title}</p>
-                <div className="Stats">
-                    <div className={e.title+"Stat"} style={{width: 315*e.percent/100}}></div>
-                </div>
-                <p className="percent">{e.percent}%</p>
-                </div>
-            );
+        return (
+          <div>
+            <p className="titStat">{e.title}</p>
+            <div className="Stats">
+              <div
+                className={e.title + "Stat"}
+                style={{ width: (315 * e.percent) / 100 }}
+              ></div>
+            </div>
+            <p className="percent">{e.percent}%</p>
+          </div>
+        );
       })}
     </Box>
   );
